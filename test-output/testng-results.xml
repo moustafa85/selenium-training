@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="1" failed="0" skipped="2">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-14T15:34:37Z" name="Suite" finished-at="2021-01-14T15:34:49Z" duration-ms="12025">
+    <groups>
+      <group name="All">
+        <method signature="HomeTest.checkFunctionality()[pri:0, instance:HomePage.HomeTest@4fe01805]" name="checkFunctionality" class="HomePage.HomeTest"/>
+      </group> <!-- All -->
+      <group name="Check">
+        <method signature="HomeTest.AccessTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:HomePage.HomeTest@4fe01805]" name="AccessTestCase" class="HomePage.HomeTest"/>
+        <method signature="HomeTest.AccessTestCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:HomePage.HomeTest@4fe01805]" name="AccessTestCases" class="HomePage.HomeTest"/>
+        <method signature="HomeTest.checkFunctionality()[pri:0, instance:HomePage.HomeTest@4fe01805]" name="checkFunctionality" class="HomePage.HomeTest"/>
+      </group> <!-- Check -->
+    </groups>
+    <test started-at="2021-01-14T15:34:37Z" name="Test" finished-at="2021-01-14T15:34:49Z" duration-ms="12025">
+      <class name="HomePage.HomeTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:HomePage.HomeTest@4fe01805]" started-at="2021-01-14T15:34:37Z" name="Setup" finished-at="2021-01-14T15:34:45Z" duration-ms="7813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method is-config="true" signature="gotoURL()[pri:0, instance:HomePage.HomeTest@4fe01805]" started-at="2021-01-14T15:34:45Z" name="gotoURL" finished-at="2021-01-14T15:34:47Z" duration-ms="2574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoURL -->
+        <test-method signature="AccessTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:HomePage.HomeTest@4fe01805]" started-at="2021-01-14T15:34:45Z" name="AccessTestCase" data-provider="returntestdata" finished-at="2021-01-14T15:34:45Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.io.IOException: Failed to read zip entry source]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.io.IOException: Failed to read zip entry source
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Failed to read zip entry source
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:103)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:324)
+at org.apache.poi.util.PackageHelper.open(PackageHelper.java:37)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:295)
+at Utilities.ExcellReader.getData(ExcellReader.java:33)
+at HomePage.HomeTest.readTestData(HomeTest.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+... 10 more
+Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:245)
+at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:159)
+at java.base/java.util.zip.ZipInputStream.read(ZipInputStream.java:195)
+at org.apache.poi.openxml4j.util.ZipSecureFile$ThresholdInputStream.read(ZipSecureFile.java:220)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource$FakeZipEntry.<init>(ZipInputStreamZipEntrySource.java:132)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:56)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:100)
+... 22 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessTestCase -->
+        <test-method signature="AccessTestCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:HomePage.HomeTest@4fe01805]" started-at="2021-01-14T15:34:45Z" name="AccessTestCases" data-provider="returntestdata" finished-at="2021-01-14T15:34:45Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:286)
+at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:756)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:327)
+at org.apache.poi.util.PackageHelper.open(PackageHelper.java:37)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:295)
+at Utilities.ExcellReader.getData(ExcellReader.java:33)
+at HomePage.HomeTest.readTestData(HomeTest.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+... 10 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessTestCases -->
+        <test-method signature="checkFunctionality()[pri:0, instance:HomePage.HomeTest@4fe01805]" started-at="2021-01-14T15:34:47Z" name="checkFunctionality" finished-at="2021-01-14T15:34:47Z" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFunctionality -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:HomePage.HomeTest@4fe01805]" started-at="2021-01-14T15:34:47Z" name="takeScreenShot" finished-at="2021-01-14T15:34:48Z" duration-ms="639" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkFunctionality status=SUCCESS method=HomeTest.checkFunctionality()[pri:0, instance:HomePage.HomeTest@4fe01805] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:HomePage.HomeTest@4fe01805]" started-at="2021-01-14T15:34:48Z" name="TearDown" finished-at="2021-01-14T15:34:49Z" duration-ms="826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- HomePage.HomeTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
